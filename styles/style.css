@@ -1,98 +1,131 @@
+body {
+    background-color: #f0f0f0;
+    color: #ffffff;
+}
+
 .cv {
     left: 50%;
-    transform: translate(-50%, -50%);
     top: 50%;
+    transform: translate(-50%, -50%);
+    width: 1127px;
+    height: 595px;
     position: absolute;
-    display: grid;
-    justify-content: center;
-}
-.cv_main {
-    background-color: 444444;
+    display: flex;
+    background-color: #444444;
     border-radius: 30px;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    align-items: center;
+    font-family: 'Helvetica';
 }
 
 .cv_info {
-    display: grid;
-    font-family: 'Roboto';
-    font-size: 18px;
-    color: #ffffff;
     text-align: center;
-    justify-items: center;
-    align-items: center;
+    flex-grow: 1;
 }
 
-section.cv_copyright {
-    align-self: end;
-    font-size: 0.6em;
-    font-family: 'Arial';
+.cv_info .icon {
+    position: absolute;
+    left: 100px;
+    top: 70px;
 }
 
-section.cv_icon {
+.cv_info .icon img {
+    background-color: #c4c4c4;
+    border-radius: 90px;
+    width: 180px;
+    height: 180px;
+    left: 100px;
+    top: 70px;
+    box-shadow: 12px 12px 0px #5e5e5e;
+}
+
+.cv_info .name {
+    position: absolute;
+    height: 44px;
+    left: 65px;
+    top: 279px;
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 44px;
     align-self: center;
 }
 
-section.cv_achievements {
-    align-self: start;
+.cv_info .description {
+    position: absolute;
+    width: 127px;
+    height: 23px;
+    left: 126px;
+    top: 331px;
+    font-size: 20px;
+    line-height: 23px;
+}
+
+.cv_info .achievements {
+    position: absolute;
+    top: 370px;
+    left: 144px;
     display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
 }
 
-.cv_achievements div {
-    width: 20px;
+.cv_info .achievements div {
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    background-color: #c4c4c4;
+    margin: 0px 5px;
+}
+
+.cv_info .download_button {
+    position: absolute;
+    width: 168px;
+    height: 46px;
+    left: 106px;
+    top: 451px;
+    background: #444444;
+    border: 3px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 40px;
+}
+
+.cv_info .download_button .link {
+    position: relative;
+    top: 8px;
+    color: #ffffff;
+    width: 105px;
     height: 20px;
-    border-radius: 10px;
-    background-color: #a9a9a9;
-    margin: 0px 5px 0px 5px;
+    font-size: 17px;
+    line-height: 20px;
 }
 
-.cv_icon div {
-    margin-left: 1vmin;
-    margin-top: -15vmin;
-    min-height: 16px;
-    min-width: 16px;
-    height: 16vmin;
-    background-color: #5e5e5e;
-    width: 16vmin;
-    border-radius: 10vmin;
+
+.cv_info .copyright {
+    position: absolute;
+    left: 109px;
+    top: 563px;
+    font-size: 14px;
+    line-height: 16px;
 }
 
-main.cv_summary {
+.cv_page {
+    width: 747px;
+    height: 595px;
     color: #ffffff;
     display: flex;
-    font-family: 'Roboto';
-    font-size: 30px;
     background-color: #222222;
     border-radius: 30px;
     text-align: center;
     flex-direction: column;
     justify-content: center;
-    align-items: stretch;
 }
 
-body {
-    background-color: #f0f0f0;
+.cv_page .name {
+    font-weight: bold;
+    font-size: 62px;
+    line-height: 71px;
 }
 
-img {
-min-height: 16px;
-    min-width: 16px;
-    height: 16vmin;
-    background-color: #a9a9a9;
-    width: 16vmin;
-    border-radius: 10vmin;
-}
-
-a {
-    color: #ffffff;
-    padding: 8px 20px 8px 20px;
-    height: 12220px;
-    border-color: #FFFFFF;
-    border-width: 2px;
-    border-radius: 30px;
-    border-style: solid;
-    font-size: 13px;
+.cv_page .description {
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 25px;
 }
