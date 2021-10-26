@@ -1,6 +1,25 @@
+:root {
+    --main_color: #ffffff;
+    --background-color: #f0f0f0;
+    --cv_color: #444444;
+    --blank_color: #c4c4c4;
+    --shadow_color: #5e5e5e;
+    --page_color: #222222;
+}
+
 body {
-    background-color: #f0f0f0;
-    color: #ffffff;
+    background-color: var(--background-color);
+    color: var(--main_color);
+}
+
+body:active {
+    --main_color: #000000;
+    --background-color: #0f0f0f;
+    --cv_color: #bbbbbb;
+    --blank_color: #3b3b3b;
+    --shadow_color: #a1a1a1;
+    --page_color: #dddddd;
+
 }
 
 .cv {
@@ -11,7 +30,7 @@ body {
     height: 595px;
     position: absolute;
     display: flex;
-    background-color: #444444;
+    background-color: var(--cv_color);
     border-radius: 30px;
     font-family: 'Helvetica';
 }
@@ -21,111 +40,111 @@ body {
     flex-grow: 1;
 }
 
-.cv_info .icon {
-    position: absolute;
-    left: 100px;
-    top: 70px;
-}
-
-.cv_info .icon img {
-    background-color: #c4c4c4;
-    border-radius: 90px;
-    width: 180px;
-    height: 180px;
-    left: 100px;
-    top: 70px;
-    box-shadow: 12px 12px 0px #5e5e5e;
-}
-
-.cv_info .name {
-    position: absolute;
-    height: 44px;
-    left: 65px;
-    top: 279px;
-    font-family: Helvetica;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 38px;
-    line-height: 44px;
-    align-self: center;
-}
-
-.cv_info .description {
-    position: absolute;
-    width: 127px;
-    height: 23px;
-    left: 126px;
-    top: 331px;
-    font-size: 20px;
-    line-height: 23px;
-}
-
-.cv_info .achievements {
-    position: absolute;
-    top: 370px;
-    left: 144px;
-    display: flex;
-}
-
-.cv_info .achievements div {
-    width: 24px;
-    height: 24px;
-    border-radius: 12px;
-    background-color: #c4c4c4;
-    margin: 0px 5px;
-}
-
-.cv_info .download_button {
-    position: absolute;
-    width: 168px;
-    height: 46px;
-    left: 106px;
-    top: 451px;
-    background: #444444;
-    border: 3px solid #FFFFFF;
-    box-sizing: border-box;
-    border-radius: 40px;
-}
-
-.cv_info .download_button .link {
-    position: relative;
-    top: 8px;
-    color: #ffffff;
-    width: 105px;
-    height: 20px;
-    font-size: 17px;
-    line-height: 20px;
-}
-
-
-.cv_info .copyright {
-    position: absolute;
-    left: 109px;
-    top: 563px;
-    font-size: 14px;
-    line-height: 16px;
-}
+	.cv_info .icon {
+	    position: absolute;
+	    left: 100px;
+	    top: 70px;
+	}
+	
+		.cv_info .icon img {
+		    background-color: var(--blank_color);
+		    border-radius: 90px;
+		    width: 180px;
+		    height: 180px;
+		    left: 100px;
+		    top: 70px;
+		    box-shadow: 12px 12px 0px var(--shadow_color);
+		}
+	
+	.cv_info .name {
+	    position: absolute;
+	    height: 44px;
+	    left: 65px;
+	    top: 279px;
+	    font-family: Helvetica;
+	    font-style: normal;
+	    font-weight: bold;
+	    font-size: 38px;
+	    line-height: 44px;
+	    align-self: center;
+	}
+	
+	.cv_info .description {
+	    position: absolute;
+	    width: 127px;
+	    height: 23px;
+	    left: 126px;
+	    top: 331px;
+	    font-size: 20px;
+	    line-height: 23px;
+	}
+	
+	.cv_info .achievements {
+	    position: absolute;
+	    top: 370px;
+	    left: 144px;
+	    display: flex;
+	}
+	
+		.cv_info .achievements div {
+		    width: 24px;
+		    height: 24px;
+		    border-radius: 12px;
+		    background-color: var(--blank_color);
+		    margin: 0px 5px;
+		}
+	
+	.cv_info .download_button {
+	    position: absolute;
+	    width: 168px;
+	    height: 46px;
+	    left: 106px;
+	    top: 451px;
+	    border: 3px solid var(--main_color);
+	    box-sizing: border-box;
+	    border-radius: 40px;
+	}
+	
+		.cv_info .download_button .link {
+		    position: relative;
+		    top: 8px;
+		    color: var(--main_color);
+		    width: 105px;
+		    height: 20px;
+		    font-size: 17px;
+		    line-height: 20px;
+		}
+	
+	
+	.cv_info .copyright {
+	    position: absolute;
+	    left: 109px;
+	    top: 563px;
+	    font-size: 14px;
+	    line-height: 16px;
+	}
 
 .cv_page {
     width: 747px;
     height: 595px;
-    color: #ffffff;
     display: flex;
-    background-color: #222222;
+    background-color: var(--page_color);
     border-radius: 30px;
     text-align: center;
     flex-direction: column;
     justify-content: center;
 }
 
-.cv_page .name {
-    font-weight: bold;
-    font-size: 62px;
-    line-height: 71px;
-}
-
-.cv_page .description {
-    font-weight: normal;
-    font-size: 22px;
-    line-height: 25px;
-}
+	.cv_page .name {
+	    margin: 4px;
+	    font-weight: bold;
+	    font-size: 62px;
+	    line-height: 71px;
+	}
+	
+	.cv_page .description {
+	    margin: 4px;
+	    font-weight: normal;
+	    font-size: 22px;
+	    line-height: 25px;
+	}
