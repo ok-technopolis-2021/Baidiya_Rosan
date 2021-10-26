@@ -136,12 +136,14 @@ body:active {
 }
 
 	.cv_page .name {
+	    margin: 4px;
 	    font-weight: bold;
 	    font-size: 62px;
 	    line-height: 71px;
 	}
 	
 	.cv_page .description {
+	    margin: 4px;
 	    font-weight: normal;
 	    font-size: 22px;
 	    line-height: 25px;
