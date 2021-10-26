@@ -1,6 +1,25 @@
+:root {
+    --main_color: #ffffff;
+    --background-color: #f0f0f0;
+    --cv_color: #444444;
+    --blank_color: #c4c4c4;
+    --shadow_color: #5e5e5e;
+    --page_color: #222222;
+}
+
 body {
-    background-color: #f0f0f0;
-    color: #ffffff;
+    background-color: var(--background-color);
+    color: var(--main_color);
+}
+
+body:active {
+    --main_color: #000000;
+    --background-color: #0f0f0f;
+    --cv_color: #bbbbbb;
+    --blank_color: #3b3b3b;
+    --shadow_color: #a1a1a1;
+    --page_color: #dddddd;
+
 }
 
 .cv {
@@ -11,7 +30,7 @@ body {
     height: 595px;
     position: absolute;
     display: flex;
-    background-color: #444444;
+    background-color: var(--cv_color);
     border-radius: 30px;
     font-family: 'Helvetica';
 }
@@ -28,13 +47,13 @@ body {
 	}
 	
 		.cv_info .icon img {
-		    background-color: #c4c4c4;
+		    background-color: var(--blank_color);
 		    border-radius: 90px;
 		    width: 180px;
 		    height: 180px;
 		    left: 100px;
 		    top: 70px;
-		    box-shadow: 12px 12px 0px #5e5e5e;
+		    box-shadow: 12px 12px 0px var(--shadow_color);
 		}
 	
 	.cv_info .name {
@@ -71,7 +90,7 @@ body {
 		    width: 24px;
 		    height: 24px;
 		    border-radius: 12px;
-		    background-color: #c4c4c4;
+		    background-color: var(--blank_color);
 		    margin: 0px 5px;
 		}
 	
@@ -81,8 +100,7 @@ body {
 	    height: 46px;
 	    left: 106px;
 	    top: 451px;
-	    background: #444444;
-	    border: 3px solid #FFFFFF;
+	    border: 3px solid var(--main_color);
 	    box-sizing: border-box;
 	    border-radius: 40px;
 	}
@@ -90,7 +108,7 @@ body {
 		.cv_info .download_button .link {
 		    position: relative;
 		    top: 8px;
-		    color: #ffffff;
+		    color: var(--main_color);
 		    width: 105px;
 		    height: 20px;
 		    font-size: 17px;
@@ -109,9 +127,8 @@ body {
 .cv_page {
     width: 747px;
     height: 595px;
-    color: #ffffff;
     display: flex;
-    background-color: #222222;
+    background-color: var(--page_color);
     border-radius: 30px;
     text-align: center;
     flex-direction: column;
