@@ -21,90 +21,90 @@ body {
     flex-grow: 1;
 }
 
-.cv_info .icon {
-    position: absolute;
-    left: 100px;
-    top: 70px;
-}
-
-.cv_info .icon img {
-    background-color: #c4c4c4;
-    border-radius: 90px;
-    width: 180px;
-    height: 180px;
-    left: 100px;
-    top: 70px;
-    box-shadow: 12px 12px 0px #5e5e5e;
-}
-
-.cv_info .name {
-    position: absolute;
-    height: 44px;
-    left: 65px;
-    top: 279px;
-    font-family: Helvetica;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 38px;
-    line-height: 44px;
-    align-self: center;
-}
-
-.cv_info .description {
-    position: absolute;
-    width: 127px;
-    height: 23px;
-    left: 126px;
-    top: 331px;
-    font-size: 20px;
-    line-height: 23px;
-}
-
-.cv_info .achievements {
-    position: absolute;
-    top: 370px;
-    left: 144px;
-    display: flex;
-}
-
-.cv_info .achievements div {
-    width: 24px;
-    height: 24px;
-    border-radius: 12px;
-    background-color: #c4c4c4;
-    margin: 0px 5px;
-}
-
-.cv_info .download_button {
-    position: absolute;
-    width: 168px;
-    height: 46px;
-    left: 106px;
-    top: 451px;
-    background: #444444;
-    border: 3px solid #FFFFFF;
-    box-sizing: border-box;
-    border-radius: 40px;
-}
-
-.cv_info .download_button .link {
-    position: relative;
-    top: 8px;
-    color: #ffffff;
-    width: 105px;
-    height: 20px;
-    font-size: 17px;
-    line-height: 20px;
-}
-
-
-.cv_info .copyright {
-    position: absolute;
-    left: 109px;
-    top: 563px;
-    font-size: 14px;
-    line-height: 16px;
-}
+	.cv_info .icon {
+	    position: absolute;
+	    left: 100px;
+	    top: 70px;
+	}
+	
+		.cv_info .icon img {
+		    background-color: #c4c4c4;
+		    border-radius: 90px;
+		    width: 180px;
+		    height: 180px;
+		    left: 100px;
+		    top: 70px;
+		    box-shadow: 12px 12px 0px #5e5e5e;
+		}
+	
+	.cv_info .name {
+	    position: absolute;
+	    height: 44px;
+	    left: 65px;
+	    top: 279px;
+	    font-family: Helvetica;
+	    font-style: normal;
+	    font-weight: bold;
+	    font-size: 38px;
+	    line-height: 44px;
+	    align-self: center;
+	}
+	
+	.cv_info .description {
+	    position: absolute;
+	    width: 127px;
+	    height: 23px;
+	    left: 126px;
+	    top: 331px;
+	    font-size: 20px;
+	    line-height: 23px;
+	}
+	
+	.cv_info .achievements {
+	    position: absolute;
+	    top: 370px;
+	    left: 144px;
+	    display: flex;
+	}
+	
+		.cv_info .achievements div {
+		    width: 24px;
+		    height: 24px;
+		    border-radius: 12px;
+		    background-color: #c4c4c4;
+		    margin: 0px 5px;
+		}
+	
+	.cv_info .download_button {
+	    position: absolute;
+	    width: 168px;
+	    height: 46px;
+	    left: 106px;
+	    top: 451px;
+	    background: #444444;
+	    border: 3px solid #FFFFFF;
+	    box-sizing: border-box;
+	    border-radius: 40px;
+	}
+	
+		.cv_info .download_button .link {
+		    position: relative;
+		    top: 8px;
+		    color: #ffffff;
+		    width: 105px;
+		    height: 20px;
+		    font-size: 17px;
+		    line-height: 20px;
+		}
+	
+	
+	.cv_info .copyright {
+	    position: absolute;
+	    left: 109px;
+	    top: 563px;
+	    font-size: 14px;
+	    line-height: 16px;
+	}
 
 .cv_page {
     width: 747px;
@@ -118,14 +118,14 @@ body {
     justify-content: center;
 }
 
-.cv_page .name {
-    font-weight: bold;
-    font-size: 62px;
-    line-height: 71px;
-}
-
-.cv_page .description {
-    font-weight: normal;
-    font-size: 22px;
-    line-height: 25px;
-}
+	.cv_page .name {
+	    font-weight: bold;
+	    font-size: 62px;
+	    line-height: 71px;
+	}
+	
+	.cv_page .description {
+	    font-weight: normal;
+	    font-size: 22px;
+	    line-height: 25px;
+	}
