@@ -12,16 +12,6 @@ body {
     color: var(--main_color);
 }
 
-body:active {
-    --main_color: #000000;
-    --background-color: #0f0f0f;
-    --cv_color: #bbbbbb;
-    --blank_color: #3b3b3b;
-    --shadow_color: #a1a1a1;
-    --page_color: #dddddd;
-
-}
-
 .cv {
     left: 50%;
     top: 50%;
@@ -82,7 +72,7 @@ body:active {
 	.cv_info .achievements {
 	    position: absolute;
 	    top: 370px;
-	    left: 144px;
+	    left: 139px;
 	    display: flex;
 	}
 	
@@ -107,7 +97,7 @@ body:active {
 	
 		.cv_info .download_button .link {
 		    position: relative;
-		    top: 8px;
+		    top: 7px;
 		    color: var(--main_color);
 		    width: 105px;
 		    height: 20px;
