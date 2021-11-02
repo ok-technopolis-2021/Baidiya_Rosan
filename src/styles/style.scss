@@ -82,7 +82,7 @@ body {
 	.achievements {
 	    position: absolute;
 	    top: 370px;
-	    left: 144px;
+	    left: 139px;
 	    display: flex;
 	
 	
@@ -105,15 +105,27 @@ body {
 	    box-sizing: border-box;
 	    border-radius: 40px;
 	
-		.link {
+	    .link {
 		    position: relative;
-		    top: 8px;
+		    top: 7px;
 		    color: var(--main-color);
 		    width: 105px;
 		    height: 20px;
 		    font-size: 17px;
 		    line-height: 20px;
-		}
+	    }
+	    .link:link {
+		    text-decoration: none;
+	    }
+	    .link:visited {
+		    text-decoration: none;
+	    }
+	    .link:hover {
+		    text-decoration: none;
+	    }
+	    .link:active {
+		    text-decoration: none;
+	    }
 	}
 
 	.copyright {

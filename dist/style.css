@@ -683,7 +683,7 @@ body {
 .cv__info .achievements {
   position: absolute;
   top: 370px;
-  left: 144px;
+  left: 139px;
   display: flex;
 }
 .cv__info .achievements div {
@@ -705,12 +705,24 @@ body {
 }
 .cv__info .download_button .link {
   position: relative;
-  top: 8px;
+  top: 7px;
   color: var(--main-color);
   width: 105px;
   height: 20px;
   font-size: 17px;
   line-height: 20px;
+}
+.cv__info .download_button .link:link {
+  text-decoration: none;
+}
+.cv__info .download_button .link:visited {
+  text-decoration: none;
+}
+.cv__info .download_button .link:hover {
+  text-decoration: none;
+}
+.cv__info .download_button .link:active {
+  text-decoration: none;
 }
 .cv__info .copyright {
   position: absolute;
