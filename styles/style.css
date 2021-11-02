@@ -82,7 +82,7 @@ body:active {
 	.cv_info .achievements {
 	    position: absolute;
 	    top: 370px;
-	    left: 144px;
+	    left: 139px;
 	    display: flex;
 	}
 	
@@ -107,7 +107,7 @@ body:active {
 	
 		.cv_info .download_button .link {
 		    position: relative;
-		    top: 8px;
+		    top: 7px;
 		    color: var(--main_color);
 		    width: 105px;
 		    height: 20px;
