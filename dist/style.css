@@ -641,16 +641,16 @@ body {
   border-radius: 30px;
   font-family: 'Helvetica';
 }
-.cv__info {
+.cv_info {
   text-align: center;
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
-.cv__info .icon {
-  position: absolute;
-  left: 100px;
-  top: 70px;
+.cv_info .icon {
+  margin-top: 70px;
 }
-.cv__info .icon img {
+.cv_info .icon img {
   background-color: var(--blank-color);
   border-radius: 90px;
   width: 180px;
@@ -659,51 +659,47 @@ body {
   top: 70px;
   box-shadow: 12px 12px 0px var(--shadow-color);
 }
-.cv__info .name {
-  position: absolute;
-  height: 44px;
-  left: 65px;
-  top: 279px;
-  font-family: Helvetica;
+.cv_info .name {
+  margin-top: 23px;
+  margin-bottom: 0px;
   font-style: normal;
   font-weight: bold;
   font-size: 38px;
   line-height: 44px;
   align-self: center;
 }
-.cv__info .description {
-  position: absolute;
-  width: 127px;
-  height: 23px;
-  left: 126px;
-  top: 331px;
+.cv_info .description {
+  margin-top: 8px;
+  margin-bottom: 0px;
+  font-style: normal;
+  font-weight: normal;
   font-size: 20px;
   line-height: 23px;
 }
-.cv__info .achievements {
-  position: absolute;
-  top: 370px;
-  left: 139px;
-  display: flex;
+.cv_info .achievements {
+  margin-top: 16px;
+  margin-bottom: 0px;
+  padding-inline-start: 0px;
 }
-.cv__info .achievements div {
+.cv_info .achievements li {
   width: 24px;
   height: 24px;
   border-radius: 12px;
   background-color: var(--blank-color);
   margin: 0px 5px;
+  display: inline-block;
 }
-.cv__info .download_button {
-  position: absolute;
+.cv_info .download-button {
+  margin: auto;
+  margin-top: 53px;
   width: 168px;
   height: 46px;
-  left: 106px;
-  top: 451px;
   border: 3px solid var(--main-color);
   box-sizing: border-box;
   border-radius: 40px;
 }
-.cv__info .download_button .link {
+.cv_info .download-button .link {
+  text-decoration: none;
   position: relative;
   top: 7px;
   color: var(--main-color);
@@ -712,26 +708,14 @@ body {
   font-size: 17px;
   line-height: 20px;
 }
-.cv__info .download_button .link:link {
-  text-decoration: none;
-}
-.cv__info .download_button .link:visited {
-  text-decoration: none;
-}
-.cv__info .download_button .link:hover {
-  text-decoration: none;
-}
-.cv__info .download_button .link:active {
-  text-decoration: none;
-}
-.cv__info .copyright {
-  position: absolute;
-  left: 109px;
-  top: 563px;
+.cv_info .copyright {
+  margin: auto;
+  margin-bottom: 17px;
+  font-style: normal;
+  font-weight: normal;
   font-size: 14px;
-  line-height: 16px;
 }
-.cv__page {
+.cv_page {
   width: 747px;
   height: 595px;
   display: flex;
@@ -741,13 +725,13 @@ body {
   flex-direction: column;
   justify-content: center;
 }
-.cv__page .name {
+.cv_page .name {
   margin: 4px;
   font-weight: bold;
   font-size: 62px;
   line-height: 71px;
 }
-.cv__page .description {
+.cv_page .description {
   margin: 4px;
   font-weight: normal;
   font-size: 22px;
