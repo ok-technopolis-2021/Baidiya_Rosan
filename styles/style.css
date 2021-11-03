@@ -1,3 +1,4 @@
+
 :root {
     --main_color: #ffffff;
     --background-color: #f0f0f0;
@@ -19,7 +20,6 @@ body:active {
     --blank_color: #3b3b3b;
     --shadow_color: #a1a1a1;
     --page_color: #dddddd;
-
 }
 
 .cv {
@@ -38,12 +38,12 @@ body:active {
 .cv_info {
     text-align: center;
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 	.cv_info .icon {
-	    position: absolute;
-	    left: 100px;
-	    top: 70px;
+	    margin-top: 70px;
 	}
 	
 		.cv_info .icon img {
@@ -57,11 +57,8 @@ body:active {
 		}
 	
 	.cv_info .name {
-	    position: absolute;
-	    height: 44px;
-	    left: 65px;
-	    top: 279px;
-	    font-family: Helvetica;
+	    margin-top: 23px;
+	    margin-bottom: 0px;
 	    font-style: normal;
 	    font-weight: bold;
 	    font-size: 38px;
@@ -70,42 +67,41 @@ body:active {
 	}
 	
 	.cv_info .description {
-	    position: absolute;
-	    width: 127px;
-	    height: 23px;
-	    left: 126px;
-	    top: 331px;
+	    margin-top: 8px;
+	    margin-bottom: 0px;
+	    font-style: normal;
+	    font-weight: normal;
 	    font-size: 20px;
 	    line-height: 23px;
 	}
 	
 	.cv_info .achievements {
-	    position: absolute;
-	    top: 370px;
-	    left: 139px;
-	    display: flex;
+	    margin-top: 16px;
+	    margin-bottom: 0px;
+	    padding-inline-start: 0px
 	}
 	
-		.cv_info .achievements div {
+		.cv_info .achievements li {
 		    width: 24px;
 		    height: 24px;
 		    border-radius: 12px;
 		    background-color: var(--blank_color);
 		    margin: 0px 5px;
+		    display: inline-block;
 		}
 	
 	.cv_info .download_button {
-	    position: absolute;
+	    margin: auto;
+	    margin-top: 53px;
 	    width: 168px;
 	    height: 46px;
-	    left: 106px;
-	    top: 451px;
 	    border: 3px solid var(--main_color);
 	    box-sizing: border-box;
 	    border-radius: 40px;
 	}
 	
 		.cv_info .download_button .link {
+		    text-decoration: none;
 		    position: relative;
 		    top: 7px;
 		    color: var(--main_color);
@@ -117,11 +113,11 @@ body:active {
 	
 	
 	.cv_info .copyright {
-	    position: absolute;
-	    left: 109px;
-	    top: 563px;
+	    margin: auto;
+	    margin-bottom: 17px;
+	    font-style: normal;
+	    font-weight: normal;
 	    font-size: 14px;
-	    line-height: 16px;
 	}
 
 .cv_page {
