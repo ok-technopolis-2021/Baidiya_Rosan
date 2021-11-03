@@ -1,15 +1,16 @@
+
 :root {
-    --main_color: #ffffff;
+    --main-color: #ffffff;
     --background-color: #f0f0f0;
-    --cv_color: #444444;
-    --blank_color: #c4c4c4;
-    --shadow_color: #5e5e5e;
-    --page_color: #222222;
+    --cv-color: #444444;
+    --blank-color: #c4c4c4;
+    --shadow-color: #5e5e5e;
+    --page-color: #222222;
 }
 
 body {
     background-color: var(--background-color);
-    color: var(--main_color);
+    color: var(--main-color);
 }
 
 .cv {
@@ -20,7 +21,7 @@ body {
     height: 595px;
     position: absolute;
     display: flex;
-    background-color: var(--cv_color);
+    background-color: var(--cv-color);
     border-radius: 30px;
     font-family: 'Helvetica';
 }
@@ -37,13 +38,13 @@ body {
 	}
 	
 		.cv_info .icon img {
-		    background-color: var(--blank_color);
+		    background-color: var(--blank-color);
 		    border-radius: 90px;
 		    width: 180px;
 		    height: 180px;
 		    left: 100px;
 		    top: 70px;
-		    box-shadow: 12px 12px 0px var(--shadow_color);
+		    box-shadow: 12px 12px 0px var(--shadow-color);
 		}
 	
 	.cv_info .name {
@@ -75,26 +76,26 @@ body {
 		    width: 24px;
 		    height: 24px;
 		    border-radius: 12px;
-		    background-color: var(--blank_color);
+		    background-color: var(--blank-color);
 		    margin: 0px 5px;
 		    display: inline-block;
 		}
 	
-	.cv_info .download_button {
+	.cv_info .download-button {
 	    margin: auto;
 	    margin-top: 53px;
 	    width: 168px;
 	    height: 46px;
-	    border: 3px solid var(--main_color);
+	    border: 3px solid var(--main-color);
 	    box-sizing: border-box;
 	    border-radius: 40px;
 	}
 	
-		.cv_info .download_button .link {
+		.cv_info .download-button .link {
 		    text-decoration: none;
 		    position: relative;
 		    top: 7px;
-		    color: var(--main_color);
+		    color: var(--main-color);
 		    width: 105px;
 		    height: 20px;
 		    font-size: 17px;
@@ -114,7 +115,7 @@ body {
     width: 747px;
     height: 595px;
     display: flex;
-    background-color: var(--page_color);
+    background-color: var(--page-color);
     border-radius: 30px;
     text-align: center;
     flex-direction: column;
