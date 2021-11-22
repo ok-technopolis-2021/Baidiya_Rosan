@@ -12,6 +12,7 @@
 body {
     background-color: var(--background-color);
     color: var(--main-color);
+    font-family: 'Helvetica';
 }
 
 .dark-theme {
@@ -28,47 +29,39 @@ body {
     top: 50%;
     transform: translate(-50%, -50%);
     width: 1127px;
-    height: 595px;
+    min-height: 595px;
     position: absolute;
     display: flex;
     background-color: var(--cv-color);
     border-radius: 30px;
-    font-family: 'Helvetica';
 }
 
 .cv_info {
-    text-align: center;
+    align-items: center;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
 
-	.icon {
+	.avatar_icon {
 	    margin-top: 70px;	
-		img {
-		    background-color: var(--blank-color);
-		    border-radius: 90px;
-		    width: 180px;
-		    height: 180px;
-		    left: 100px;
-		    top: 70px;
-		    box-shadow: 12px 12px 0px var(--shadow-color);
-		}
+	    background-image: url(assets/icon.jpg);
+	    background-size: cover;
+	    border-radius: 90px;
+	    width: 180px;
+	    height: 180px;
+	    box-shadow: 12px 12px 0px var(--shadow-color);
 	}
 	
 	.name {
-	    margin-top: 23px;
+	    margin-top: 28px;
 	    margin-bottom: 0px;
-	    font-style: normal;
-	    font-weight: bold;
 	    font-size: 38px;
 	    line-height: 44px;
-	    align-self: center;
 	}
 	
 	.description {
 	    margin-top: 8px;
 	    margin-bottom: 0px;
-	    font-style: normal;
 	    font-weight: normal;
 	    font-size: 20px;
 	    line-height: 23px;
@@ -92,28 +85,17 @@ body {
 	.download-button {
 	    margin: auto;
 	    margin-top: 53px;
-	    width: 168px;
-	    height: 46px;
+	    padding: 10px 29px 11px;
+	    background-color: var(--cv-color);
 	    border: 3px solid var(--main-color);
-	    box-sizing: border-box;
-	    border-radius: 40px;
-	
-	    .link {
-		    text-decoration: none;
-		    position: relative;
-		    top: 7px;
-		    color: var(--main-color);
-		    width: 105px;
-		    height: 20px;
-		    font-size: 17px;
-		    line-height: 20px;
-	    }
+	    border-radius: 25px;
+	    color: var(--main-color);
+	    font-size: 17px;
 	}
 
 	.copyright {
 	    margin: auto;
 	    margin-bottom: 17px;
-	    font-style: normal;
 	    font-weight: normal;
 	    font-size: 14px;
 	}
@@ -121,7 +103,6 @@ body {
 
 .cv_page {
     width: 747px;
-    height: 595px;
     display: flex;
     background-color: var(--page-color);
     border-radius: 30px;
@@ -131,7 +112,6 @@ body {
 
 	.name {
 	    margin: 4px;
-	    font-weight: bold;
 	    font-size: 62px;
 	    line-height: 71px;
 	}
