@@ -7,6 +7,7 @@
     --blank-color: #c4c4c4;
     --shadow-color: #5e5e5e;
     --page-color: #222222;
+    --button-position: 0%;
 }
 
 body {
@@ -22,6 +23,7 @@ body {
     --blank-color: #3b3b3b;
     --shadow-color: #a1a1a1;
     --page-color: #dddddd;
+    --button-position: 100%;
 }
 
 .cv {
@@ -34,6 +36,16 @@ body {
     display: flex;
     background-color: var(--cv-color);
     border-radius: 30px;
+
+    button {
+        background-color: var(--cv-color);
+        border: 3px solid var(--main-color);
+        border-radius: 25px;
+        color: var(--main-color);
+        font-size: 17px;
+    }
+
+
 }
 
 .cv_info {
@@ -67,17 +79,30 @@ body {
 	    line-height: 23px;
 	}
 	
-	.achievements {
+	.contacts {
 	    margin-top: 16px;
 	    margin-bottom: 0px;
 	    padding-inline-start: 0px;
+
+	.vk_icon {
+	    background-image: url(assets/vk.ico);
+	}
+
+	.ok_icon {
+	    background-image: url(assets/ok.ico);
+	}
+
+	.github_icon {
+	    background-image: url(assets/github.ico);
+	}
 
 		li {
 		    width: 24px;
 		    height: 24px;
 		    border-radius: 12px;
-		    background-color: var(--blank-color);
-		    margin: 0px 5px;
+		    background-color: #ffffff;
+		    background-size: cover;
+		    margin: 0px 2px;
 		    display: inline-block;
 		}
 	}
@@ -86,12 +111,7 @@ body {
 	    margin: auto;
 	    margin-top: 53px;
 	    padding: 10px 29px 11px;
-	    background-color: var(--cv-color);
-	    border: 3px solid var(--main-color);
-	    border-radius: 25px;
-	    color: var(--main-color);
-	    font-size: 17px;
-	}
+    	}
 
 	.copyright {
 	    margin: auto;
@@ -123,3 +143,15 @@ body {
 	    line-height: 25px;
 	}
 }
+
+.color_switch {
+    position: fixed;
+    left: 90vw;
+    top: 90vh;
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    background-size: cover;
+    background-image: url(assets/light.png);
+    background-position: var(--button-position);
+    background-color: var(--background-color);}
