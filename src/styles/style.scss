@@ -45,7 +45,6 @@ body {
         font-size: 17px;
     }
 
-
 }
 
 .cv_info {
@@ -111,7 +110,7 @@ body {
 	    margin: auto;
 	    margin-top: 53px;
 	    padding: 10px 29px 11px;
-    	}
+	}
 
 	.copyright {
 	    margin: auto;
@@ -154,4 +153,5 @@ body {
     background-size: cover;
     background-image: url(assets/light.png);
     background-position: var(--button-position);
-    background-color: var(--background-color);}
+    background-color: var(--background-color);
+}
