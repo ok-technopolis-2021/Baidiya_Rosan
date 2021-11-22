@@ -616,10 +616,12 @@ template {
   --blank-color: #c4c4c4;
   --shadow-color: #5e5e5e;
   --page-color: #222222;
+  --button-position: 0%;
 }
 body {
   background-color: var(--background-color);
   color: var(--main-color);
+  font-family: 'Helvetica';
 }
 .dark-theme {
   --main-color: #000000;
@@ -628,96 +630,90 @@ body {
   --blank-color: #3b3b3b;
   --shadow-color: #a1a1a1;
   --page-color: #dddddd;
+  --button-position: 100%;
 }
 .cv {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   width: 1127px;
-  height: 595px;
+  min-height: 595px;
   position: absolute;
   display: flex;
   background-color: var(--cv-color);
   border-radius: 30px;
-  font-family: 'Helvetica';
+}
+.cv button {
+  background-color: var(--cv-color);
+  border: 3px solid var(--main-color);
+  border-radius: 25px;
+  color: var(--main-color);
+  font-size: 17px;
 }
 .cv_info {
-  text-align: center;
+  align-items: center;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
 }
-.cv_info .icon {
+.cv_info .avatar_icon {
   margin-top: 70px;
-}
-.cv_info .icon img {
-  background-color: var(--blank-color);
+  background-image: url(assets/icon.jpg);
+  background-size: cover;
   border-radius: 90px;
   width: 180px;
   height: 180px;
-  left: 100px;
-  top: 70px;
   box-shadow: 12px 12px 0px var(--shadow-color);
 }
 .cv_info .name {
-  margin-top: 23px;
+  margin-top: 28px;
   margin-bottom: 0px;
-  font-style: normal;
-  font-weight: bold;
   font-size: 38px;
   line-height: 44px;
-  align-self: center;
 }
 .cv_info .description {
   margin-top: 8px;
   margin-bottom: 0px;
-  font-style: normal;
   font-weight: normal;
   font-size: 20px;
   line-height: 23px;
 }
-.cv_info .achievements {
+.cv_info .contacts {
   margin-top: 16px;
   margin-bottom: 0px;
   padding-inline-start: 0px;
 }
-.cv_info .achievements li {
+.cv_info .contacts .vk_icon {
+  background-image: url(assets/vk.ico);
+}
+.cv_info .contacts .ok_icon {
+  background-image: url(assets/ok.ico);
+}
+.cv_info .contacts .github_icon {
+  background-image: url(assets/github.ico);
+}
+.cv_info .contacts li {
   width: 24px;
   height: 24px;
   border-radius: 12px;
-  background-color: var(--blank-color);
-  margin: 0px 5px;
+  background-color: #ffffff;
+  background-size: cover;
+  margin: 0px 2px;
   display: inline-block;
 }
 .cv_info .download-button {
   margin: auto;
   margin-top: 53px;
-  width: 168px;
-  height: 46px;
-  border: 3px solid var(--main-color);
-  box-sizing: border-box;
-  border-radius: 40px;
-}
-.cv_info .download-button .link {
-  text-decoration: none;
-  position: relative;
-  top: 7px;
-  color: var(--main-color);
-  width: 105px;
-  height: 20px;
-  font-size: 17px;
-  line-height: 20px;
+  padding: 10px 29px 11px;
 }
 .cv_info .copyright {
   margin: auto;
   margin-bottom: 17px;
-  font-style: normal;
   font-weight: normal;
   font-size: 14px;
 }
 .cv_page {
   width: 747px;
-  height: 595px;
   display: flex;
   background-color: var(--page-color);
   border-radius: 30px;
@@ -727,7 +723,6 @@ body {
 }
 .cv_page .name {
   margin: 4px;
-  font-weight: bold;
   font-size: 62px;
   line-height: 71px;
 }
@@ -736,4 +731,16 @@ body {
   font-weight: normal;
   font-size: 22px;
   line-height: 25px;
+}
+.color_switch {
+  position: fixed;
+  left: 90vw;
+  top: 90vh;
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  background-size: cover;
+  background-image: url(assets/light.png);
+  background-position: var(--button-position);
+  background-color: var(--background-color);
 }
