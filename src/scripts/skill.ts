@@ -13,8 +13,7 @@ export class Skill {
 
     public addToPage() {
         this.list.insertAdjacentHTML('beforeend', this.createHTML());
-        this.list.lastElementChild!.querySelector('.skill__button-delete')!
-            .addEventListener("click", () => {
+        this.list.lastElementChild!.querySelector('.skill__button-delete')!.addEventListener("click", () => {
                     this.skills.splice(this.skills.indexOf(this.name), 1);
                     document.getElementById(this.name).remove();
                 }
