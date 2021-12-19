@@ -1,0 +1,80 @@
+@import './reset.scss';
+
+:root {
+    --main-color: #ffffff;
+    --background-color: #f0f0f0;
+    --shadow-color: #000000;
+    --page-color: #222222;
+}
+
+input, .skill__bar {
+    width: 365px;
+    height: 30px;
+}
+
+progress {
+    text-align: center;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--main-color);
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.skills {
+    display: grid;
+    width: 600px;
+    border-radius: 10px;
+    background: var(--page-color);
+    padding: 20px 40px;
+
+}
+
+.skills-header {
+    color: white;
+    margin: 0px 20px;
+}
+
+.skills-list {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0px;
+}
+
+.skills-adder, .skill {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0px;
+}
+
+.skill__name {
+    margin: 0px 10px;
+}
+
+.skills-adder__button, .skill__button-delete {
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    margin: 15.5px 30px;
+}
+
+.skills-adder__button {
+    background-image: url("./assets/plus.png");
+}
+
+.skill__button-delete {
+    background-image: url("./assets/minus.png");
+}
+
+.skills-adder__input, .skill__stats {
+    display: flex;
+    flex-direction: column;
+}
+
+progress.skill__bar:before {
+    text-shadow: var(--shadow-color) 0px 0px 4px;
+    content: attr(value);
+}
