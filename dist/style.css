@@ -614,6 +614,7 @@ template {
   --background-color: #f0f0f0;
   --shadow-color: #000000;
   --page-color: #222222;
+  --error: #ee1111;
 }
 input,
 .skill__bar {
@@ -679,4 +680,8 @@ body {
 progress.skill__bar:before {
   text-shadow: var(--shadow-color) 0px 0px 4px;
   content: attr(value);
+}
+.error-block {
+  text-shadow: var(--shadow-color) 0px 0px 4px;
+  color: var(--error);
 }

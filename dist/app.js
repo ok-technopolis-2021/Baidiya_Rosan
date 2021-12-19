@@ -8,8 +8,7 @@ var Skill = /** @class */ (function () {
     Skill.prototype.addToPage = function () {
         var _this = this;
         this.list.insertAdjacentHTML('beforeend', this.createHTML());
-        this.list.lastElementChild.querySelector('.skill__button-delete')
-            .addEventListener("click", function () {
+        this.list.lastElementChild.querySelector('.skill__button-delete').addEventListener("click", function () {
             _this.skills.splice(_this.skills.indexOf(_this.name), 1);
             document.getElementById(_this.name).remove();
         });
@@ -35,18 +34,18 @@ function addSkill(Event) {
     }
     var name = resolve(document.querySelector('.skills-adder__input-name').value);
     var ratio = parseInt(document.querySelector('.skills-adder__input-ratio').value);
-    if (ratio < 0) {
-        ratio = 0;
-    }
     if (ratio > 100) {
         ratio = 100;
     }
-    if (!name || !ratio) {
-        errorBlock.textContent = "Вы ввели пустое значение!";
+    if (ratio < 0 || !ratio) {
+        ratio = 0;
+    }
+    if (!name) {
+        errorBlock.textContent = "Пустое название навыка";
         return;
     }
     if (addedSkillsNames.indexOf(name) != -1) {
-        errorBlock.textContent = "Такой уже есть!";
+        errorBlock.textContent = "Уже существующий навык";
         return;
     }
     var skill = new Skill(name, ratio, skillsList, addedSkillsNames);

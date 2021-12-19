@@ -1,4 +1,4 @@
-import {Skill} from "./skill";
+﻿import {Skill} from "./skill";
 
 function resolve(str: string) {
     return str.replace(new RegExp('<', 'g'), '&lt').replace(new RegExp('>', 'g'), '&gt');
@@ -18,21 +18,21 @@ function addSkill(Event: event) {
     const name = resolve((document.querySelector('.skills-adder__input-name') as HTMLInputElement).value);
     let ratio = parseInt((document.querySelector('.skills-adder__input-ratio') as HTMLInputElement).value);
 
-    if (ratio < 0) {
-        ratio = 0;
-    }
     if (ratio > 100) {
         ratio = 100;
     }
 
+    if (ratio < 0 || !ratio) {
+        ratio = 0;
+    }
 
-    if (!name || !ratio) {
-        errorBlock!.textContent = "Вы ввели пустое значение!";
+    if (!name) {
+        errorBlock!.textContent = "Пустое название навыка";
         return;
     }
 
     if (addedSkillsNames.indexOf(name) != -1) {
-        errorBlock!.textContent = "Такой уже есть!";
+        errorBlock!.textContent = "Уже существующий навык";
         return;
     }
 
