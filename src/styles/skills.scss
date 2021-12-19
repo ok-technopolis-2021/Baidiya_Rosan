@@ -8,8 +8,11 @@
 }
 
 input, .skill__bar {
-    width: 365px;
     height: 30px;
+}
+
+.skills-adder__form, .skill__bar {
+    width: 365px;
 }
 
 progress {
@@ -58,7 +61,7 @@ body {
     background-size: cover;
     width: 40px;
     height: 40px;
-    margin: 15.5px 30px;
+    margin: 16px 30px;
 }
 
 .skills-adder__button {
