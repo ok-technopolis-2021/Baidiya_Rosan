@@ -4,15 +4,18 @@ const less = require('gulp-less');
 const inject = require('gulp-inject');
 const rollup = require('rollup');
 const image = require('gulp-image');
+const typescript = require("@rollup/plugin-typescript");
 
 const assetsPath = 'src/assets/*';
 const stylesPath = 'src/styles/**/*.scss';
-const jsPath = 'src/**/*.js';
+const tsPath = 'src/scripts/*.ts';
 const htmlPath = 'src/index.html';
 const distPath = 'dist/';
 const rollupConfig = {
-    input: 'src/app.js',
-    plugins: []
+    input: 'src/scripts/app.ts',
+    plugins: [
+        typescript()
+    ]
 }
 
 const imageOptimizingSettings = {
@@ -44,7 +47,7 @@ gulp.task('css', () => {
 
 gulp.task('watch', function (done) {
     gulp.watch(stylesPath, gulp.series('css'));
-    gulp.watch(jsPath, gulp.series('rollup'));
+    gulp.watch(tsPath, gulp.series('rollup'));
     done();
 });
 
