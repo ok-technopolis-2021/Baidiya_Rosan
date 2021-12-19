@@ -21,7 +21,7 @@ var Skill = /** @class */ (function () {
 }());
 
 function resolve(str) {
-    return str.replace(new RegExp('<', 'g'), '&lt').replace(new RegExp('>', 'g'), '&gt');
+    return str.replace(/</gi, "&lt;").replace(/>/gi, "&gt;").replace(/&/gi, "&amp;").replace(/"/gi, "&quot;");
 }
 var addForm = document.querySelector('.skills-adder__form');
 var skillsList = document.querySelector('.skills-list');

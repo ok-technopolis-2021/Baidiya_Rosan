@@ -1,7 +1,7 @@
 ﻿import {Skill} from "./skill";
 
 function resolve(str: string) {
-    return str.replace(new RegExp('<', 'g'), '&lt').replace(new RegExp('>', 'g'), '&gt');
+    return str.replace(/</gi, `&lt;`).replace(/>/gi, `&gt;`).replace(/&/gi, `&amp;`).replace(/"/gi, `&quot;`);
 }
 
 const addForm = document.querySelector('.skills-adder__form') as HTMLElement;
