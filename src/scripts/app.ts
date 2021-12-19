@@ -1,7 +1,7 @@
 ﻿import {Skill} from "./skill";
 
 function resolve(str: string) {
-    return str.replace(/</gi, `&lt;`).replace(/>/gi, `&gt;`).replace(/&/gi, `&amp;`).replace(/"/gi, `&quot;`);
+    return /[\<\>\&\"\|]/.test(str);
 }
 
 const addForm = document.querySelector('.skills-adder__form') as HTMLElement;
@@ -15,7 +15,7 @@ function addSkill(Event: event) {
         errorBlock!.textContent = "";
     }
 
-    const name = resolve((document.querySelector('.skills-adder__input-name') as HTMLInputElement).value);
+    const name = (document.querySelector('.skills-adder__input-name') as HTMLInputElement).value;
     let ratio = parseInt((document.querySelector('.skills-adder__input-ratio') as HTMLInputElement).value);
 
     if (ratio > 100) {
@@ -24,6 +24,11 @@ function addSkill(Event: event) {
 
     if (ratio < 0 || !ratio) {
         ratio = 0;
+    }
+
+    if (resolve(name)) {
+        errorBlock!.textContent = "Недопустимые символы";
+        return;
     }
 
     if (!name) {

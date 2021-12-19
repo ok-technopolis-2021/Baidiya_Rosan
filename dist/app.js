@@ -21,7 +21,7 @@ var Skill = /** @class */ (function () {
 }());
 
 function resolve(str) {
-    return str.replace(/</gi, "&lt;").replace(/>/gi, "&gt;").replace(/&/gi, "&amp;").replace(/"/gi, "&quot;");
+    return /[\<\>\&\"\|]/.test(str);
 }
 var addForm = document.querySelector('.skills-adder__form');
 var skillsList = document.querySelector('.skills-list');
@@ -32,13 +32,17 @@ function addSkill(Event) {
     if (errorBlock.textContent) {
         errorBlock.textContent = "";
     }
-    var name = resolve(document.querySelector('.skills-adder__input-name').value);
+    var name = document.querySelector('.skills-adder__input-name').value;
     var ratio = parseInt(document.querySelector('.skills-adder__input-ratio').value);
     if (ratio > 100) {
         ratio = 100;
     }
     if (ratio < 0 || !ratio) {
         ratio = 0;
+    }
+    if (resolve(name)) {
+        errorBlock.textContent = "Недопустимые символы";
+        return;
     }
     if (!name) {
         errorBlock.textContent = "Пустое название навыка";
